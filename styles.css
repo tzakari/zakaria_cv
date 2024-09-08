@@ -1,0 +1,198 @@
+/* Styles par défaut (clair) */
+body {
+    background-color: #ffffff;
+    color: #343a40;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+header {
+    background: linear-gradient(to right, #007bff, #00aaff);
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+    position: relative;
+}
+
+header .particles-js-canvas-el {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 1;
+}
+
+nav {
+    background-color: #343a40;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .nav-link {
+    color: white;
+    transition: color 0.3s;
+}
+
+nav .nav-link.active {
+    color: #00aaff;
+}
+
+.btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    color: #343a40; /* Couleur du titre en mode clair */
+}
+
+section h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #007bff;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.card, .list-group-item {
+    background-color: #f8f9fa;
+    color: #343a40;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.card:hover, .list-group-item:hover {
+    transform: translateY(-10px);
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+/* Styles spécifiques pour le mode sombre */
+.dark-mode {
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+}
+
+.dark-mode header {
+    background: linear-gradient(to right, #1a1a1a, #2c3e50);
+}
+
+.dark-mode nav {
+    background-color: #2c3e50;
+}
+
+.dark-mode footer {
+    background-color: #2c3e50;
+}
+
+.dark-mode .btn-light {
+    background-color: #343a40;
+    color: #f5f5f5;
+}
+
+.dark-mode section h2 {
+    color: #f5f5f5 !important; /* Forcer la couleur du titre en mode sombre */
+}
+
+.dark-mode .card, .dark-mode .list-group-item {
+    background-color: #2c3e50 !important;
+    color: #f5f5f5 !important;
+}
+
+.dark-mode .card:hover, .dark-mode .list-group-item:hover {
+    background-color: #34495e !important;
+}
+
+/* Forcer l'application des styles en mode sombre pour certaines sections */
+.dark-mode .parallax-experience,
+.dark-mode .parallax-skills,
+.dark-mode .parallax-about,
+.dark-mode .parallax-education,
+.dark-mode .parallax-interests,
+.dark-mode .parallax-professional,
+.dark-mode .parallax-competences {
+    background-color: #2c3e50 !important;
+    color: #f5f5f5 !important;
+}
+
+.dark-mode .parallax-experience h2,
+.dark-mode .parallax-skills h2,
+.dark-mode .parallax-about h2,
+.dark-mode .parallax-education h2,
+.dark-mode .parallax-interests h2,
+.dark-mode .parallax-professional h2,
+.dark-mode .parallax-competences h2 {
+    color: #f5f5f5 !important;
+}
+
+/* Pour s'assurer que le texte est bien contrasté */
+.dark-mode a, 
+.dark-mode p, 
+.dark-mode li {
+    color: #f5f5f5 !important;
+}
+
+/* Repositionner le bouton de bascule */
+#theme-toggle {
+    position: fixed;
+    top: 20px; /* Aligné en haut */
+    right: 40px; /* Aligné à droite mais suffisamment éloigné du bord */
+    z-index: 2000; /* Toujours visible au-dessus des autres éléments */
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px; /* Agrandissement du texte pour une meilleure visibilité */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: #0056b3;
+}
