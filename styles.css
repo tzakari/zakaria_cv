@@ -220,3 +220,43 @@ section {
 #theme-toggle:hover {
     background-color: #0056b3;
 }
+
+
+
+/* Style général pour tous les boutons */
+.btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px; /* Bord arrondi */
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre du bouton */
+    cursor: pointer;
+}
+
+/* Style spécifique pour le bouton de téléchargement */
+.btn-primary {
+    background-color: var(--primary-color); /* Couleur de fond principale */
+    color: white;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Couleur au survol */
+    transform: translateY(-2px); /* Effet de surélévation */
+}
+
+/* Style spécifique pour le bouton lorsqu'il est actif ou cliqué */
+.btn-primary:active {
+    background-color: #004085; /* Couleur plus sombre au clic */
+    transform: translateY(0); /* Enlève l'effet de surélévation */
+}
+
+/* Optionnel : Ajout d'une animation au survol */
+.btn-primary:focus {
+    outline: none; /* Retire le contour par défaut au focus */
+    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); /* Lueur autour du bouton */
+}
